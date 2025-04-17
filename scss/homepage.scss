@@ -1,0 +1,136 @@
+$primary-dark: #002400;
+$accent-green: #00ff66;
+$button-green: linear-gradient(90deg, #66cc77, #00cc44);
+$text-light: #f1f1d9;
+
+#dd_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $primary-dark;
+  color: $text-light;
+
+  #dd_homeLink {
+    text-decoration: none;
+
+    #dd_logoBlock {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      div:first-child {
+        img {
+          height: 60px;
+          width: auto;
+          display: block;
+        }
+      }
+
+      #dd_logo {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: #00ff66;
+          transition: all 0.4s ease;
+          transform: translateX(-50%);
+        }
+      }
+
+      &:hover #dd_logo::after {
+        width: 100%;
+      }
+    }
+  }
+
+  #dd_navMenu ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+
+    li {
+      color: $text-light;
+      cursor: pointer;
+      font-weight: 500;
+
+      &:hover {
+        color: $accent-green;
+      }
+    }
+
+    #dd_mapButton {
+      background: $button-green;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+#dd_mainContent {
+  background-color: $primary-dark;
+  color: $text-light;
+  min-height: 90vh;
+
+  #dd_heroSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+
+    #dd_textBlock {
+      max-width: 40%;
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      #dd_mainMapButton {
+        background: $button-green;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    #dd_graphicBlock {
+      #dd_tournamentImage {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
