@@ -1,3 +1,9 @@
+$primary-dark: #002400;
+$accent-green: #00ff66;
+$button-green: linear-gradient(90deg, #66cc77, #00cc44);
+$text-light: #f1f1d9;
+
 body {
   margin: 0;
+  background-color: $primary-dark;
 }
